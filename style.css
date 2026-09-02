@@ -1,78 +1,102 @@
-header {
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER */
+
+header {
     background: linear-gradient(135deg, #0066ff, #00d4ff);
     display: flex;
-    justify-content: space-between; /* Joga os textos para a esquerda e a imagem para a direita */
-    align-items: center; /* Centraliza tudo verticalmente */
-    padding: 20px 40px; /* Adiciona um respiro nas bordas do header */
-    color: white; /* Melhora o contraste da letra contra o fundo azul */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    gap: 30px;
+}
+
+.textos-header {
+    flex: 1;
 }
 
 header img {
     width: 150px;
     height: 150px;
+    flex-shrink: 0;
     border-radius: 50%;
     object-fit: cover;
-    
-    /* Melhorias na imagem de perfil */
-    border: 4px solid #ffffff;                     /* Borda branca para separar a foto do fundo azul */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);     /* Sombra projetada para efeito de elevação */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito ao passar o mouse */
 header img:hover {
-    transform: scale(1.05);                         /* Aumenta levemente a imagem */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);    /* Aumenta a intensidade da sombra */
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
 }
 
-main{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* CONTEÚDO */
+
+main {
     padding: 20px 40px;
 }
 
-footer{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 20px 40px;
-}
-section{
+section {
     margin-bottom: 30px;
 }
 
-.container{
+/* RESUMO */
+
+.container {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
-.img-conteudo{
+.container p {
+    flex: 1;
+}
+
+.img-conteudo {
     height: 250px;
     width: 250px;
+    flex-shrink: 0;
     border-radius: 20%;
     object-fit: cover;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.caixa{
+/* CAIXAS DE HABILIDADES */
+
+.caixa {
     text-align: center;
-    width: 280px;
+    flex: 1;
+    min-width: 150px;
     padding: 25px;
     border-radius: 15px;
     background-color: grey;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
-.txt-caixa{
+
+.txt-caixa {
     text-align: center;
     font-weight: bold;
 }
-.img-caixa{
+
+.img-caixa {
     height: 100px;
     width: 100px;
-
+    object-fit: contain;
 }
 
-.img-centralizada{
+/* GITHUB */
+
+.img-centralizada {
     display: block;
     margin: 0 auto;
     height: 150px;
@@ -80,5 +104,162 @@ section{
 }
 
 .github-link {
-    display: inline-block; /* Permite aplicar animações sem quebrar o layout */
+    display: inline-block;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px 40px;
+}
+
+
+/* ================================= */
+/* TABLET */
+/* ================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .caixa {
+        flex: 1 1 200px;
+    }
+}
+
+
+/* ================================= */
+/* CELULAR */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    header {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    header img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .textos-header h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .textos-header h2 {
+        font-size: 19px;
+    }
+
+    .textos-header h3 {
+        font-size: 16px;
+    }
+
+
+    /* MAIN */
+
+    main {
+        padding: 20px 15px;
+    }
+
+
+    /* RESUMO */
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container p {
+        width: 100%;
+    }
+
+    .img-conteudo {
+        width: 100%;
+        max-width: 300px;
+        height: 220px;
+    }
+
+
+    /* HABILIDADES */
+
+    section .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .caixa {
+        width: 100%;
+        min-width: 0;
+        padding: 20px 10px;
+    }
+
+    .img-caixa {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    /* GITHUB */
+
+    .img-centralizada {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    footer p {
+        word-break: break-word;
+    }
+}
+
+
+/* ================================= */
+/* CELULARES MUITO PEQUENOS */
+/* ================================= */
+
+@media (max-width: 400px) {
+
+    .textos-header h1 {
+        font-size: 24px;
+    }
+
+    .textos-header h2 {
+        font-size: 17px;
+    }
+
+    section .container {
+        grid-template-columns: 1fr;
+    }
+
+    .caixa {
+        padding: 20px;
+    }
 }

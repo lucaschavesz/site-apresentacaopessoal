@@ -1,206 +1,133 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <title>Lucas de Melo Chaves | Engenharia de Computação</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas de Melo Chaves | Portfólio</title>
+  <!-- Fonte Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header>
+  <!-- HEADER / HERO SECTION -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="textos-header">
+        <span class="badge">Disponível para Estágio</span>
+        <h1>Lucas de Melo Chaves</h1>
+        <h2>Estudante de Engenharia de Computação</h2>
+        <p class="localizacao">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Zona Sul — São Paulo, SP
+        </p>
+      </div>
+      <div class="foto-container">
+        <img src="img/IMG_20260725_133213_519.webp" alt="Foto de perfil de Lucas de Melo Chaves">
+      </div>
+    </div>
+  </header>
 
-        <div class="textos-header">
-            <p class="tag-header">PORTFÓLIO PESSOAL</p>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
 
-            <h1>Lucas de Melo Chaves</h1>
+    <!-- RESUMO PROFISSIONAL -->
+    <section class="section-card">
+      <h3 class="section-title">Resumo Profissional</h3>
+      <div class="resumo-grid">
+        <div class="resumo-texto">
+          <p>
+            Estudante de Engenharia de Computação (5º semestre) na Faculdade Engenheiro Salvador Arena, com interesse focado em <strong>Engenharia de Dados</strong> e desenvolvimento de software.
+          </p>
+          <p>
+            Possuo conhecimentos em <strong>Python, SQL, Pandas, Pacote Office e Power BI</strong> adquiridos por meio de projetos práticos e cursos voltados ao mercado. Busco oportunidade de estágio para aplicar e ampliar meus conhecimentos em engenharia e análise de dados.
+          </p>
+        </div>
+        <div class="resumo-img-wrapper">
+          <img class="img-conteudo" src="img/roketpik-code-5113374.jpg" alt="Código de programação em tela">
+        </div>
+      </div>
+    </section>
 
-            <h2>Estudante de Engenharia de Computação</h2>
-
-            <h3>Zona Sul · São Paulo - SP</h3>
+    <!-- HABILIDADES -->
+    <section class="section-card">
+      <h3 class="section-title">Principais Habilidades</h3>
+      <div class="habilidades-grid">
+        
+        <div class="caixa">
+          <div class="img-wrapper">
+            <img class="img-caixa" src="img/Python-logo-notext.svg.webp" alt="Logo Python">
+          </div>
+          <p class="txt-caixa">Python</p>
         </div>
 
-        <img
-            src="img/IMG_20260725_133213_519.webp"
-            alt="Foto de perfil de Lucas de Melo Chaves"
-        >
-
-    </header>
-
-
-    <main>
-
-        <!-- RESUMO -->
-        <section class="secao resumo">
-
-            <h3 class="titulo-secao">Resumo profissional</h3>
-
-            <div class="container resumo-container">
-
-                <div class="texto-resumo">
-
-                    <p>
-                        Estudante de Engenharia de Computação (5º semestre) na
-                        Faculdade Engenheiro Salvador Arena, com interesse em
-                        Engenharia de Dados e desenvolvimento de software.
-                    </p>
-
-                    <p>
-                        Possuo conhecimentos em Python, SQL, Pandas, Pacote
-                        Office e Power BI, adquiridos por meio de projetos
-                        práticos e cursos voltados ao mercado.
-                    </p>
-
-                    <p>
-                        Busco uma oportunidade de estágio para aplicar e
-                        ampliar meus conhecimentos em engenharia e análise
-                        de dados.
-                    </p>
-
-                </div>
-
-                <img
-                    class="img-conteudo"
-                    src="img/roketpik-code-5113374.jpg"
-                    alt="Programação e desenvolvimento de software"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- HABILIDADES -->
-        <section class="secao">
-
-            <h3 class="titulo-secao">Principais habilidades</h3>
-
-            <div class="container habilidades">
-
-                <div class="caixa">
-                    <img
-                        class="img-caixa"
-                        src="img/Python-logo-notext.svg.webp"
-                        alt="Logo Python"
-                    >
-                    <p class="txt-caixa">Python</p>
-                </div>
-
-                <div class="caixa">
-                    <img
-                        class="img-caixa"
-                        src="img/microsoft-sql-server.svg"
-                        alt="Logo Microsoft SQL Server"
-                    >
-                    <p class="txt-caixa">SQL</p>
-                </div>
-
-                <div class="caixa">
-                    <img
-                        class="img-caixa"
-                        src="img/git-logo-svg-vector.svg"
-                        alt="Logo Git"
-                    >
-                    <p class="txt-caixa">Git / GitHub</p>
-                </div>
-
-                <div class="caixa">
-                    <img
-                        class="img-caixa"
-                        src="img/New_Power_BI_Logo.svg.webp"
-                        alt="Logo Power BI"
-                    >
-                    <p class="txt-caixa">Power BI</p>
-                </div>
-
-                <div class="caixa">
-                    <img
-                        class="img-caixa"
-                        src="img/Microsoft_Office_Excel_(2019–2025).svg.webp"
-                        alt="Logo Microsoft Excel"
-                    >
-                    <p class="txt-caixa">Excel</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PORTFÓLIO -->
-        <section class="secao portfolio">
-
-            <h3 class="titulo-secao">Portfólio</h3>
-
-            <p>
-                Confira meus principais projetos, códigos e estudos
-                disponíveis no GitHub.
-            </p>
-
-            <a
-                href="https://github.com/lucaschavesz"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="github-link"
-            >
-
-                <img
-                    class="img-centralizada"
-                    src="img/25231.png"
-                    alt="GitHub"
-                >
-
-                <span>Visitar meu GitHub</span>
-
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <h3>Entre em contato</h3>
-
-        <div class="contatos">
-
-            <p>
-                <strong>LinkedIn</strong><br>
-
-                <a
-                    href="https://www.linkedin.com/in/lucas-de-melo-3b84712a1/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    linkedin.com/in/lucas-de-melo-3b84712a1
-                </a>
-            </p>
-
-            <p>
-                <strong>E-mail</strong><br>
-
-                <a href="mailto:lucasdemelo426@gmail.com">
-                    lucasdemelo426@gmail.com
-                </a>
-            </p>
-
+        <div class="caixa">
+          <div class="img-wrapper">
+            <img class="img-caixa" src="img/microsoft-sql-server.svg" alt="Logo SQL Server">
+          </div>
+          <p class="txt-caixa">SQL</p>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 Lucas de Melo Chaves · Portfólio pessoal</p>
+        <div class="caixa">
+          <div class="img-wrapper">
+            <img class="img-caixa" src="img/git-logo-svg-vector.svg" alt="Logo Git">
+          </div>
+          <p class="txt-caixa">Git / GitHub</p>
         </div>
 
-    </footer>
+        <div class="caixa">
+          <div class="img-wrapper">
+            <img class="img-caixa" src="img/New_Power_BI_Logo.svg.webp" alt="Logo Power BI">
+          </div>
+          <p class="txt-caixa">Power BI</p>
+        </div>
+
+        <div class="caixa">
+          <div class="img-wrapper">
+            <img class="img-caixa" src="img/Microsoft_Office_Excel_(2019–2025).svg.webp" alt="Logo Excel">
+          </div>
+          <p class="txt-caixa">Excel</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO / GITHUB -->
+    <section class="section-card portfolio-section">
+      <h3 class="section-title">Portfólio</h3>
+      <p class="portfolio-sub">Meus principais projetos de código e dados estão documentados no GitHub:</p>
+      
+      <a href="https://github.com/lucaschavesz" target="_blank" rel="noopener noreferrer" class="github-card">
+        <img class="img-github" src="img/25231.png" alt="Ícone GitHub">
+        <div class="github-info">
+          <h4>github.com/lucaschavesz</h4>
+          <span>Clique para ver os repositórios &rarr;</span>
+        </div>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ / CONTATO -->
+  <footer>
+    <div class="footer-container">
+      <h3>Vamos conversar?</h3>
+      <div class="contatos-list">
+        <a href="https://www.linkedin.com/in/lucas-de-melo-3b84712a1/" target="_blank" rel="noopener noreferrer" class="contato-item">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>lucas-de-melo-3b84712a1</span>
+        </a>
+
+        <a href="mailto:lucasdemelo426@gmail.com" class="contato-item">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-12-8.513v14.8h24v-14.8l-12 9.728-12-9.728z"/></svg>
+          <span>lucasdemelo426@gmail.com</span>
+        </a>
+      </div>
+      <p class="copyright">&copy; Lucas de Melo Chaves. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
 </body>
-
 </html>
-```

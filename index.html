@@ -1,80 +1,206 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>Apresentação pessoal</title>
+
+<head>
+    <title>Lucas de Melo Chaves | Engenharia de Computação</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-  </head>
+</head>
+
 <body>
-    
+
+    <!-- HEADER -->
     <header>
+
         <div class="textos-header">
+            <p class="tag-header">PORTFÓLIO PESSOAL</p>
+
             <h1>Lucas de Melo Chaves</h1>
+
             <h2>Estudante de Engenharia de Computação</h2>
-            <h3>Zona Sul - São Paulo - SP</h3>
+
+            <h3>Zona Sul · São Paulo - SP</h3>
         </div>
-        <img src="img/IMG_20260725_133213_519.webp" alt="Foto de perfil">
+
+        <img
+            src="img/IMG_20260725_133213_519.webp"
+            alt="Foto de perfil de Lucas de Melo Chaves"
+        >
+
     </header>
-    
+
+
     <main>
-        <div class="container">
-            <h3 style="text-align: center;">Resumo profissional: </h3>
-            <p style="text-align: justify;">Estudante de Engenharia de Computação (5º semestre) na Faculdade
-                Engenheiro Salvador Arena, com interesse em Engenharia de Dados e
-                desenvolvimento de software. Conhecimentos em Python, SQL, Pandas,
-                Pacote Office e Power BI adquiridos por meio de projetos práticos
-                e cursos voltados ao mercado. Busco oportunidade de estágio para aplicar e
-                ampliar meus conhecimentos em engenharia e análise de dados.</p>
-            <img class="img-conteudo" src="img/roketpik-code-5113374.jpg">
+
+        <!-- RESUMO -->
+        <section class="secao resumo">
+
+            <h3 class="titulo-secao">Resumo profissional</h3>
+
+            <div class="container resumo-container">
+
+                <div class="texto-resumo">
+
+                    <p>
+                        Estudante de Engenharia de Computação (5º semestre) na
+                        Faculdade Engenheiro Salvador Arena, com interesse em
+                        Engenharia de Dados e desenvolvimento de software.
+                    </p>
+
+                    <p>
+                        Possuo conhecimentos em Python, SQL, Pandas, Pacote
+                        Office e Power BI, adquiridos por meio de projetos
+                        práticos e cursos voltados ao mercado.
+                    </p>
+
+                    <p>
+                        Busco uma oportunidade de estágio para aplicar e
+                        ampliar meus conhecimentos em engenharia e análise
+                        de dados.
+                    </p>
+
+                </div>
+
+                <img
+                    class="img-conteudo"
+                    src="img/roketpik-code-5113374.jpg"
+                    alt="Programação e desenvolvimento de software"
+                >
 
             </div>
 
-        <section>
-            <h3 style="text-align: center;">Principais habilidades</h3>
-            <div class="container">
+        </section>
+
+
+        <!-- HABILIDADES -->
+        <section class="secao">
+
+            <h3 class="titulo-secao">Principais habilidades</h3>
+
+            <div class="container habilidades">
+
                 <div class="caixa">
+                    <img
+                        class="img-caixa"
+                        src="img/Python-logo-notext.svg.webp"
+                        alt="Logo Python"
+                    >
                     <p class="txt-caixa">Python</p>
-                    <img class="img-caixa"  src="img/Python-logo-notext.svg.webp" alt="Logo Python">
                 </div>
+
                 <div class="caixa">
+                    <img
+                        class="img-caixa"
+                        src="img/microsoft-sql-server.svg"
+                        alt="Logo Microsoft SQL Server"
+                    >
                     <p class="txt-caixa">SQL</p>
-                    <img class="img-caixa"  src="img/microsoft-sql-server.svg" alt="Logo Python">
                 </div>
+
                 <div class="caixa">
-                    <p class="txt-caixa">Git/GitHub</p>
-                    <img class="img-caixa"  src="img/git-logo-svg-vector.svg" alt="Logo Python">
+                    <img
+                        class="img-caixa"
+                        src="img/git-logo-svg-vector.svg"
+                        alt="Logo Git"
+                    >
+                    <p class="txt-caixa">Git / GitHub</p>
                 </div>
+
                 <div class="caixa">
+                    <img
+                        class="img-caixa"
+                        src="img/New_Power_BI_Logo.svg.webp"
+                        alt="Logo Power BI"
+                    >
                     <p class="txt-caixa">Power BI</p>
-                    <img class="img-caixa"  src="img/New_Power_BI_Logo.svg.webp" alt="Logo Python">
                 </div>
+
                 <div class="caixa">
+                    <img
+                        class="img-caixa"
+                        src="img/Microsoft_Office_Excel_(2019–2025).svg.webp"
+                        alt="Logo Microsoft Excel"
+                    >
                     <p class="txt-caixa">Excel</p>
-                    <img class="img-caixa"  src="img/Microsoft_Office_Excel_(2019–2025).svg.webp" alt="Logo Python">
                 </div>
+
             </div>
 
         </section>
 
-        <section style="text-align: center;">
-            <h3 style="text-align: center;">Portfólio</h3>
-            <p>Meus principais projetos estão em meu GitHub, disponível no ícone abaixo:</p>
-            <a href="https://github.com/lucaschavesz" target="_blank" rel="noopener noreferrer" class="github-link">
-                <img class="img-centralizada" src="img/25231.png" alt="icon github">
-            </a>
-        </section>
 
-        
+        <!-- PORTFÓLIO -->
+        <section class="secao portfolio">
+
+            <h3 class="titulo-secao">Portfólio</h3>
+
+            <p>
+                Confira meus principais projetos, códigos e estudos
+                disponíveis no GitHub.
+            </p>
+
+            <a
+                href="https://github.com/lucaschavesz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+            >
+
+                <img
+                    class="img-centralizada"
+                    src="img/25231.png"
+                    alt="GitHub"
+                >
+
+                <span>Visitar meu GitHub</span>
+
+            </a>
+
+        </section>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <h3 style="text-align: center;">Contato</h3>
-        <p style="text-align: center;">LinkedIn: <a href="https://www.linkedin.com/in/lucas-de-melo-3b84712a1/" target="_blank" rel="noopener noreferrer">lucas-de-melo-3b84712a1</a></p>
-        <p style="text-align: center;">E-mail: lucasdemelo426@gmail.com</p>
-       
+
+        <h3>Entre em contato</h3>
+
+        <div class="contatos">
+
+            <p>
+                <strong>LinkedIn</strong><br>
+
+                <a
+                    href="https://www.linkedin.com/in/lucas-de-melo-3b84712a1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    linkedin.com/in/lucas-de-melo-3b84712a1
+                </a>
+            </p>
+
+            <p>
+                <strong>E-mail</strong><br>
+
+                <a href="mailto:lucasdemelo426@gmail.com">
+                    lucasdemelo426@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Lucas de Melo Chaves · Portfólio pessoal</p>
+        </div>
 
     </footer>
+
 </body>
+
 </html>
+```

@@ -1,265 +1,582 @@
+
+/* =========================================
+   RESET
+========================================= */
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.7;
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
-    background: linear-gradient(135deg, #0066ff, #00d4ff);
+    min-height: 330px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+
+    gap: 50px;
+
+    padding: 55px max(40px, calc((100% - 1100px) / 2));
+
     color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-    gap: 30px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 255, 255, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0756c9,
+            #0089d9
+        );
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.18);
 }
 
 .textos-header {
     flex: 1;
 }
 
+.tag-header {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 5px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.textos-header h1 {
+    margin-bottom: 8px;
+
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+.textos-header h2 {
+    margin-bottom: 8px;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.textos-header h3 {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
 header img {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
+
     flex-shrink: 0;
-    border-radius: 50%;
+
     object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 header img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    transform: scale(1.04);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* CONTEÚDO */
+
+/* =========================================
+   MAIN
+========================================= */
 
 main {
-    padding: 20px 40px;
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    padding: 60px 30px;
 }
 
-section {
+.secao {
+    margin-bottom: 70px;
+}
+
+.titulo-secao {
+    position: relative;
+
     margin-bottom: 30px;
+
+    text-align: center;
+
+    color: #0f172a;
+
+    font-size: 26px;
 }
 
-/* RESUMO */
+.titulo-secao::after {
+    content: "";
 
-.container {
+    display: block;
+
+    width: 45px;
+    height: 4px;
+
+    margin: 10px auto 0;
+
+    border-radius: 10px;
+
+    background: #0879d1;
+}
+
+
+/* =========================================
+   RESUMO
+========================================= */
+
+.resumo-container {
     display: flex;
-    gap: 20px;
     align-items: center;
+
+    gap: 50px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf0;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
 }
 
-.container p {
+.texto-resumo {
     flex: 1;
+}
+
+.texto-resumo p {
+    margin-bottom: 15px;
+
+    color: #475569;
+
+    text-align: justify;
+}
+
+.texto-resumo p:last-child {
+    margin-bottom: 0;
 }
 
 .img-conteudo {
-    height: 250px;
-    width: 250px;
+    width: 270px;
+    height: 230px;
+
     flex-shrink: 0;
-    border-radius: 20%;
+
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.15);
 }
 
-/* CAIXAS DE HABILIDADES */
+
+/* =========================================
+   HABILIDADES
+========================================= */
+
+.habilidades {
+    display: flex;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
 
 .caixa {
-    text-align: center;
-    flex: 1;
     min-width: 150px;
-    padding: 25px;
-    border-radius: 15px;
-    background-color: grey;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    flex: 1;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf0;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
-.txt-caixa {
-    text-align: center;
-    font-weight: bold;
+.caixa:hover {
+    transform: translateY(-6px);
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 12px 25px rgba(15, 23, 42, 0.12);
 }
 
 .img-caixa {
-    height: 100px;
-    width: 100px;
+    width: 80px;
+    height: 80px;
+
+    margin-bottom: 15px;
+
     object-fit: contain;
 }
 
-/* GITHUB */
+.txt-caixa {
+    color: #1e293b;
 
-.img-centralizada {
-    display: block;
-    margin: 0 auto;
-    height: 150px;
-    width: 150px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PORTFÓLIO
+========================================= */
+
+.portfolio {
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf0;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.portfolio > p {
+    margin-bottom: 25px;
+
+    color: #64748b;
 }
 
 .github-link {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #0f172a;
+
+    text-decoration: none;
+
+    font-weight: 700;
 }
 
-/* FOOTER */
+.img-centralizada {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.github-link:hover .img-centralizada {
+    transform: scale(1.08);
+}
+
+.github-link span {
+    color: #0879d1;
+
+    transition:
+        color 0.2s ease;
+}
+
+.github-link:hover span {
+    color: #0756c9;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
-    padding: 20px 40px;
+    padding: 45px 30px 20px;
+
+    color: #cbd5e1;
+
+    background: #0f172a;
+
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+}
+
+.contatos {
+    display: flex;
+    justify-content: center;
+
+    gap: 70px;
+
+    margin-bottom: 35px;
+}
+
+.contatos p {
+    color: #94a3b8;
+}
+
+.contatos strong {
+    color: #ffffff;
+}
+
+.contatos a {
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.contatos a:hover {
+    color: #93c5fd;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: #64748b;
+
+    font-size: 13px;
 }
 
 
-/* ================================= */
-/* TABLET */
-/* ================================= */
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
 
     header {
-        padding: 20px;
+        padding: 45px 30px;
     }
 
     main {
-        padding: 20px;
+        padding: 50px 25px;
     }
 
-    footer {
-        padding: 20px;
+    .resumo-container {
+        gap: 30px;
     }
 
-    .container {
-        flex-wrap: wrap;
+    .img-conteudo {
+        width: 230px;
+        height: 210px;
     }
 
     .caixa {
-        flex: 1 1 200px;
+        flex: 1 1 180px;
+    }
+
+    .contatos {
+        gap: 40px;
     }
 }
 
 
-/* ================================= */
-/* CELULAR */
-/* ================================= */
+/* =========================================
+   CELULAR
+========================================= */
 
 @media (max-width: 600px) {
 
-    /* HEADER */
-
     header {
+        min-height: auto;
+
         flex-direction: column-reverse;
+
+        padding: 40px 20px;
+
         text-align: center;
-        padding: 30px 20px;
     }
 
     header img {
-        width: 130px;
-        height: 130px;
+        width: 135px;
+        height: 135px;
     }
 
     .textos-header h1 {
-        font-size: 28px;
-        margin-bottom: 10px;
+        font-size: 30px;
     }
 
     .textos-header h2 {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .textos-header h3 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 
-    /* MAIN */
-
     main {
-        padding: 20px 15px;
+        padding: 40px 15px;
+    }
+
+    .secao {
+        margin-bottom: 50px;
     }
 
 
     /* RESUMO */
 
-    .container {
+    .resumo-container {
         flex-direction: column;
-        gap: 20px;
+
+        padding: 25px 20px;
+
+        gap: 25px;
     }
 
-    .container p {
-        width: 100%;
+    .texto-resumo p {
+        text-align: left;
     }
 
     .img-conteudo {
         width: 100%;
-        max-width: 300px;
-        height: 220px;
+        max-width: 320px;
+        height: 210px;
     }
 
 
     /* HABILIDADES */
 
-    section .container {
+    .habilidades {
         display: grid;
+
         grid-template-columns: 1fr 1fr;
-        gap: 15px;
+
+        gap: 12px;
     }
 
     .caixa {
-        width: 100%;
         min-width: 0;
+
         padding: 20px 10px;
     }
 
     .img-caixa {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
 
 
-    /* GITHUB */
+    /* PORTFÓLIO */
 
-    .img-centralizada {
-        width: 120px;
-        height: 120px;
+    .portfolio {
+        padding: 35px 20px;
     }
 
 
     /* FOOTER */
 
     footer {
-        padding: 20px 15px;
-        text-align: center;
+        padding: 40px 15px 20px;
     }
 
-    footer p {
+    .contatos {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .contatos a {
         word-break: break-word;
     }
 }
 
 
-/* ================================= */
-/* CELULARES MUITO PEQUENOS */
-/* ================================= */
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
 
 @media (max-width: 400px) {
 
     .textos-header h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .textos-header h2 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
-    section .container {
+    .habilidades {
         grid-template-columns: 1fr;
     }
 
-    .caixa {
-        padding: 20px;
+    .titulo-secao {
+        font-size: 23px;
     }
 }
+
